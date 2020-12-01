@@ -1,0 +1,99 @@
+body{
+  background-color: #FDFDFD;
+}
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.titleipt{
+  width: 300px;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 8px;
+  margin: 20px 0 10px;
+}
+.searchbtn{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 0 20px;
+  padding: 6px 0 5px;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #409eff;
+  background-color: #409eff;
+  color: #FFF;
+  cursor: pointer;
+}
+/* #editor{
+} */
+.savebtn {
+  width: 100px;
+  text-align: center;
+  margin-top: 20px;
+  border: 1px solid #409eff;
+  background-color: #409eff;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 6px 0 6px;
+  cursor: pointer;
+  float: right;
+}
+.tipinfo{
+  width: 300px;
+  border: #409eff;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  margin-left: -150px;
+  background-color: #EEE;
+  z-index: 502;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 4px;
+}
+.showtip{
+  display: block;
+  animation: showalow 0.2s;
+}
+/* 淡出时短暂样式 */
+.fadeout {
+  opacity:0;
+  animation: hidealow 0.2s;
+}
+.hidetip{
+  display: none;
+}
+.red{
+  color: #f56c6c;
+  background-color: #fef0f0;
+  border: 1px solid #fbc4c4;
+}
+.green{
+  color: #67c23a;
+  background-color: #f0f9eb;
+  border: 1px solid #c2e7b0;
+}
+/* 显示Tips淡入动画 */
+@keyframes showalow {
+from {opacity: 0;}
+to {opacity:1;}
+}
+
+/* 隐藏TIps淡出动画 */
+@keyframes hidealow {
+  from {opacity: 1;}
+  to {opacity:0;}
+}
+@media screen and (max-width: 470px) {
+  .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .titleipt{
+    margin: 0;
+  }
+}
