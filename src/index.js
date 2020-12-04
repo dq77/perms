@@ -6,16 +6,28 @@
 import E from 'wangeditor'
 import axios from './axios.js';
 import './style.css';
+import logo from './images/titbg.png'
 const editor = new E('#editor')
-console.log(window.innerHeight);
+let edhei = 0
+if (window.innerWidth > 1000) {
+  edhei = 500
+} else {
+  edhei = window.innerHeight-300
+}
 const config = {
-  height: window.innerHeight-250,
+  height: edhei,
   zIndex: 500,
   showFullScreen: false,
   menus: [ 'head', 'bold', 'fontSize', 'fontName', 'italic', 'underline', 'strikeThrough', 'lineHeight', 'foreColor', 'backColor', 'link', 'list', 'justify', 'quote', 'emoticon', 'image', 'table', 'code', 'splitLine' ]
 }
 editor.config = Object.assign(editor.config, config)
 editor.create()
+
+const bigImg = document.createElement("img");
+bigImg.src = logo;
+bigImg.width="1297";
+document.getElementById('logo-area').appendChild(bigImg)
+
 let artVal = 0 // 缓存当前文章id 避免编辑文章且未保存时改动id
 console.log(process.env.NODE_ENV);
 // 点击按钮查询

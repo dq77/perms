@@ -33,6 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: 'src/index.html',
+      favicon: './src/images/favicon.ico'
     })
   ],
   module: {
@@ -40,6 +41,15 @@ module.exports = {
       {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
       }
     ]
   }
