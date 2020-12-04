@@ -18,7 +18,7 @@ const config = {
   height: edhei,
   zIndex: 500,
   showFullScreen: false,
-  menus: [ 'head', 'bold', 'fontSize', 'fontName', 'italic', 'underline', 'strikeThrough', 'lineHeight', 'foreColor', 'backColor', 'link', 'list', 'justify', 'quote', 'emoticon', 'image', 'table', 'code', 'splitLine' ]
+  menus: [ 'head', 'bold', 'fontSize', 'fontName', 'italic', 'underline', 'strikeThrough', 'lineHeight', 'foreColor', 'backColor', 'link', 'list', 'justify', 'quote', 'emoticon', 'image', 'table', 'splitLine' ]
 }
 editor.config = Object.assign(editor.config, config)
 editor.create()
