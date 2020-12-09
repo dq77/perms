@@ -43,7 +43,7 @@ body{
   padding: 4px 8px;
   margin: 20px 0 10px;
 }
-.searchbtn{
+.searchbtn, .hisbtn, .clsbtn{
   display: inline-block;
   font-size: 14px;
   line-height: 16px;
@@ -106,6 +106,60 @@ body{
   background-color: #f0f9eb;
   border: 1px solid #c2e7b0;
 }
+.hismodel{
+  width: 660px;
+  margin: 0 auto;
+  position: absolute;
+  top: 300px;
+  margin-left: 40px;
+  z-index: 502;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba( 78, 78, 78, 0.8);
+  padding: 10px;
+  display: none;
+}
+.showmdl{
+  display: block;
+}
+.hismodel table{
+  border: 1px solid #999;
+  /* width: 100%; */
+  font-size: 12px;
+  border-bottom: 0px;
+}
+.histips{
+  font-size: 12px;
+  color: #666;
+}
+.clsbtn{
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+  
+}
+.hismodel tr td:nth-child(1){
+  display: inline-block;
+  height: 50px;
+  width: 450px;
+  overflow: auto;
+  border-bottom: 1px solid #999;
+  border-right: 1px solid #999;
+}
+.hismodel tr td:nth-child(2){
+  width: 130px;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding-left: 10px;
+}
+.hismodel tr td:nth-child(3){
+  width: 36px;
+  border-bottom: 1px solid #999;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.seehis{
+  color: #409eff;
+}
 /* 显示Tips淡入动画 */
 @keyframes showalow {
 from {opacity: 0;}
@@ -119,6 +173,9 @@ to {opacity:1;}
 }
 @media screen and (max-width: 1130px) {
   .banner{
+    display: none;
+  }
+  .hisbtn{
     display: none;
   }
   .container{

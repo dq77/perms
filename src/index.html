@@ -17,12 +17,21 @@
   <div class="container">
     <div class="real">
       <div class="top">
-        <input type="text" class="titleipt" placeholder="请输入编码" onfocus="this.select();">
+        <input type="text" class="titleipt" placeholder="请输入编码">
         <div class="searchbtn">查询</div>
+        <div class="hisbtn">历史记录</div>
       </div>
       <div id="editor"></div>
       <div class="savebtn">保存</div>
       <div class="tipinfo hidetip"></div>
+      <div class="hismodel">
+        <table>
+          <thead><tr><td>历史内容</td><td>保存时间</td><td>操作</td></tr></thead>
+          <tbody id="histbody"></tbody>
+        </table>
+        <span class="histips">更多历史记录请联系管理员</span>
+        <div class="clsbtn">关闭</div>
+      </div>
     </div>
   </div>
 </body>
