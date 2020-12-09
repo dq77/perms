@@ -106,6 +106,7 @@ function readHistory(id) {
       for (let item of res.data) {
         str += `<tr><td>${item.val}</td><td>${item.savetime}</td><td data-idx="${item.id}" class="seehis">查看</td></tr>`
       }
+      document.querySelector('#mdtitle').innerHTML = `${id} 的历史记录`
       document.querySelector('#histbody').innerHTML = str
       document.querySelector('.hismodel').className = 'hismodel showmdl'
       // 查看历史按钮

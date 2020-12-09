@@ -107,33 +107,43 @@ body{
   border: 1px solid #c2e7b0;
 }
 .hismodel{
-  width: 660px;
+  width: 640px;
   margin: 0 auto;
   position: absolute;
-  top: 300px;
+  top: 200px;
   margin-left: 40px;
   z-index: 502;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba( 78, 78, 78, 0.8);
-  padding: 10px;
+  box-shadow: 0 2px 12px 0 rgba( 0, 0, 0, 0.3);
+  padding: 0px 15px 10px;
   display: none;
 }
 .showmdl{
   display: block;
+  animation: showalow 0.2s;
+}
+#mdtitle{
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ebeef5;
+  margin: 0 -15px 10px;
+  color: #303133;
 }
 .hismodel table{
-  border: 1px solid #999;
-  /* width: 100%; */
+  border: 1px solid #ebeef5;
+  color: #606266;
   font-size: 12px;
   border-bottom: 0px;
 }
 .histips{
+  display: inline-block;
   font-size: 12px;
   color: #666;
+  margin-top: 20px;
 }
 .clsbtn{
   margin-top: 10px;
-  margin-right: 10px;
   float: right;
   
 }
@@ -142,18 +152,25 @@ body{
   height: 50px;
   width: 450px;
   overflow: auto;
-  border-bottom: 1px solid #999;
-  border-right: 1px solid #999;
+  border-bottom: 1px solid #ebeef5;
+  border-right: 1px solid #ebeef5;
+}
+.hismodel tr td.tdtitle{
+  padding-top: 16px;
+  padding-left: 10px;
+  height: 34px;
+  width: 440px;
 }
 .hismodel tr td:nth-child(2){
   width: 130px;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
+  border-right: 1px solid #ebeef5;
+  border-bottom: 1px solid #ebeef5;
   padding-left: 10px;
 }
 .hismodel tr td:nth-child(3){
   width: 36px;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #ebeef5;
+  border-left: 0px;
   padding-left: 10px;
   cursor: pointer;
 }
@@ -162,14 +179,26 @@ body{
 }
 /* 显示Tips淡入动画 */
 @keyframes showalow {
-from {opacity: 0;}
-to {opacity:1;}
+from {
+  opacity: 0;
+  margin-top: -30px;
+}
+to {
+  opacity:1;
+  margin-top: 0;
+}
 }
 
 /* 隐藏TIps淡出动画 */
 @keyframes hidealow {
-  from {opacity: 1;}
-  to {opacity:0;}
+  from {
+    opacity: 1;
+    margin-top: 0;
+  }
+  to {
+    opacity:0;
+    margin-top: -30px;
+  }
 }
 @media screen and (max-width: 1130px) {
   .banner{
