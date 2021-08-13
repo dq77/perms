@@ -1,7 +1,7 @@
 /*
  * @Author: 刁琪
  * @Date: 2020-11-30 10:34:05
- * @LastEditors: わからないよう
+ * @LastEditors: 掉漆
  */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -24,7 +24,7 @@ module.exports = {
       "/picert": {
         pathRewrite: {"^/picert" : ""}, // 路径重写
         // target: "http://localhost:9305"
-        target: "http://154.222.1.52:9305"
+        target: "http://103.143.81.242:9305"
       }
     }
   },
