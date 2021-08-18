@@ -22,9 +22,9 @@ module.exports = {
     port: 8842,
     proxy: {
       "/picert": {
-        pathRewrite: {"^/picert" : ""}, // 路径重写
+        // pathRewrite: {"^/picert" : ""}, // 路径重写
         // target: "http://localhost:9305"
-        target: "http://103.143.81.242:9305"
+        target: "https://perm.diaoshifu.buzz"
       }
     }
   },
